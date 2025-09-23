@@ -398,7 +398,7 @@ exec_always $HOME/.config/i3/scripts/import-gsettings
 #exec_always --no-startup-id picom -b
 
 # for custom config:
-#exec_always --no-startup-id picom --config  ~/.config/picom.conf
+exec_always --no-startup-id picom --config  ~/.config/picom.conf
 
 
 ## applications/services
@@ -610,3 +610,4 @@ exec --no-startup-id gnome-keyring-daemon --start --components=secrets
 # bindsym $mod+Shift+l exec --no-startup-id sh -c 'i3lock -c 000000 && systemctl suspend'
 # Or map the hardware keys to lock+sleep:
 bindsym XF86PowerOff exec --no-startup-id sh -c 'i3lock -c 000000 && systemctl suspend'
+
