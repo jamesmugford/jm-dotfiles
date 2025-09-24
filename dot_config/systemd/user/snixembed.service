@@ -1,0 +1,14 @@
+[Unit]
+Description=snixembed (system tray)
+After=graphical-session.target
+
+[Service]
+Type=forking
+Environment=DISPLAY=:0
+Environment=XDG_RUNTIME_DIR=%t
+ExecStart=/usr/bin/snixembed --fork
+Restart=on-failure
+RestartSec=2
+
+[Install]
+WantedBy=default.target

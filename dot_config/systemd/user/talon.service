@@ -1,0 +1,15 @@
+[Unit]
+Description=Talon (user)
+After=graphical-session.target snixembed.service
+Requires=snixembed.service
+
+[Service]
+Type=simple
+Environment=DISPLAY=:0
+Environment=XDG_RUNTIME_DIR=%t
+ExecStart=/home/yzjm/.local/opt/talon/talon
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=default.target
