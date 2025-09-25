@@ -619,3 +619,8 @@ exec --no-startup-id gnome-keyring-daemon --start --components=secrets
 # Or map the hardware keys to lock+sleep:
 bindsym XF86PowerOff exec --no-startup-id sh -c 'i3lock -c 000000 && systemctl suspend'
 
+
+
+# 1) disable Caps' lock behavior, then remap its keycode to F16
+exec_always --no-startup-id setxkbmap -option caps:none
+exec_always --no-startup-id xmodmap -e 'keycode 66 = F16' -e 'clear Lock'
