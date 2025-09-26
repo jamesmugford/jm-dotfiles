@@ -1,0 +1,9 @@
+github-desktop-bin
+paru-bin
+paru-bin-debug
+plex-desktop
+snapper-gui-git
+synology-drive
+visual-studio-code-bin
+yay-bin
+yay-bin-debug
