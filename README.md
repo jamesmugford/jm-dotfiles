@@ -1,3 +1,6 @@
+# Install
+git clone https://github.com/jamesmugford/jm-dotfiles.git .local/share/chezmoi
+
 # Chezmoi Cheat Sheet
 chezmoi init
 chezmoi add ~/.bashrc
