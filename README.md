@@ -1,6 +1,9 @@
 # Install
 git clone https://github.com/jamesmugford/jm-dotfiles.git .local/share/chezmoi
 
+# Upstream (Tracked)
+https://github.com/endeavouros-team/endeavouros-i3wm-setup/commits/main/
+
 # Chezmoi Cheat Sheet
 chezmoi init
 chezmoi add ~/.bashrc
@@ -21,7 +24,7 @@ pacman -Qqem > pkglist-aur.txt
 
 install catpuccin theme
 
-## Install
+## Todo Install
 howdy
 espanso
 starship?
