@@ -33,11 +33,13 @@ starship?
 
 # Extra
 
-https://github.com/endeavouros-team/endeavouros-i3wm-setup
-Tracked to:
-e144575
+## Talon
+mkdir -p "$HOME/.local/opt/talon" &&
+  tar -Jxf $HOME/Downloads/talon-linux-*.tar.xz --directory="$HOME/.local/opt"
+git clone https://github.com/talonhub/community     $HOME/.talon/user/community
+git clone https://github.com/jamesmugford/jm-talon  $HOME/.talon/user/jm-talon
 
-https://github.com/endeavouros-team/EndeavourOS-packages-lists/
+
 
 
 https://github.com/ChrisTitusTech/linutil
