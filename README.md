@@ -1,3 +1,8 @@
+# James Mugford's Dotfiles. 
+
+System:
+Arch, Chezmoi
+
 # Install
 git clone https://github.com/jamesmugford/jm-dotfiles.git .local/share/chezmoi
 
@@ -39,6 +44,8 @@ mkdir -p "$HOME/.local/opt/talon" &&
 git clone https://github.com/talonhub/community     $HOME/.talon/user/community
 git clone https://github.com/jamesmugford/jm-talon  $HOME/.talon/user/jm-talon
 
+
+*Stop screen tearing*: https://wiki.archlinux.org/title/NVIDIA/Troubleshooting#Avoid_screen_tearing
 
 
 

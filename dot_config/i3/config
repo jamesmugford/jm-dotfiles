@@ -443,7 +443,7 @@ exec --no-startup-id ~/.screenlayout/monitor.sh
 exec --no-startup-id sleep 1 && feh --bg-fill /usr/share/endeavouros/backgrounds/endeavouros-wallpaper.png
 
 # set powersavings for display:
-exec --no-startup-id xset s 480 dpms 600 600 600
+exec --no-startup-id xset s 1800 dpms 2000 2000 2000
 
 # disable power saving (for example if using xscreensaver)
 #exec --no-startup-id xset -dpms
@@ -610,7 +610,7 @@ bindsym $mod+t exec --no-startup-id rofi -show window \
 # ...existing code...
 #exec --no-startup-id snixembed --fork
 #exec --no-startup-id sh -c 'sleep 2 && ~/.local/opt/talon/talon'
-
+exec --no-startup-id snixembed --fork && ~/.local/opt/talon/talon
 
 exec --no-startup-id gnome-keyring-daemon --start --components=secrets
 

@@ -1,0 +1,2 @@
+! Use 120 DPI to approximate 1.25x UI scaling without blurring
+Xft.dpi: 120
