@@ -472,7 +472,7 @@ exec --no-startup-id /usr/bin/dunst
 # autotiling script
 # https://github.com/nwg-piotr/autotiling
 # `pacman -Syu autotiling`
-#exec_always --no-startup-id autotiling
+exec_always --no-startup-id autotiling
 
 # Autostart apps as you like
 #exec --no-startup-id sleep 2 && xfce4-terminal
@@ -624,3 +624,6 @@ bindsym XF86PowerOff exec --no-startup-id sh -c 'i3lock -c 000000 && systemctl s
 # 1) disable Caps' lock behavior, then remap its keycode to F16
 exec_always --no-startup-id setxkbmap -option caps:none
 exec_always --no-startup-id xmodmap -e 'keycode 66 = F16' -e 'clear Lock'
+
+# UE5 windows always floating
+for_window [class="UnrealEditor"] floating enable, focus
