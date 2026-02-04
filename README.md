@@ -58,6 +58,14 @@ sudo systemctl enable ntpd.service
 sudo systemctl enable vnstat.service
 ```
 
+```sh
+yay -S github-desktop-bin snapper-gui-git synology-drive visual-studio-code-bin
+```
+
+```sh
+yay -S plex-desktop
+```
+
 
 ### Dependencies
 
