@@ -7,13 +7,10 @@ Built on top of Endevour OS's i3 install.
 ### [Installation](#installation) · [Contributions](#support-and-contributions) · [Detailed information](#detailed-information)
 
 ## Installation
-Install base system.
-```sh
-sudo pacman -S --needed pulseaudio xorg
-```
+Base system handled by EndeavourOS installer.
 Install dependencies.
 ```sh
-yay -S --needed btop code fastfetch alacritty kitty mate-polkit mpd ncmpcpp papirus-icon-theme picom zsh zed ttf-roboto-mono ttf-iosevka-nerd ffcast inotify-tools libnotify rofi-vscode-mode slop xclip
+yay -S --needed btop code fastfetch alacritty papirus-icon-theme picom zsh ttf-roboto-mono ttf-iosevka-nerd inotify-tools libnotify slop xclip
 ```
 
 Clone this repository and copy files.
@@ -36,17 +33,12 @@ rm -rf ~/.config/nvim/.git
 ```
 
 
-```sh
-yay -S dhcpcd
-sudo systemctl enable --now dhcpcd.service
-```
-
 Install optional dependencies.
 ```sh
-yay -S --needed bc fzf mpc nano vim net-tools tree
+yay -S --needed bc fzf neovim net-tools tree
 ```
 ```sh
-yay -S --needed 7zip czkawka-gui firefox-beta-bin firefox-developer-edition gimp inkscape gparted libreoffice-fresh vlc nemo nemo-fileroller obs-studio obsidian qalculate-gtk vnstat yt-dlp
+yay -S --needed 7zip firefox-developer-edition gimp inkscape gparted libreoffice-fresh vlc nemo nemo-fileroller obs-studio obsidian qalculate-gtk yt-dlp
 ```
 ```sh
 yay -S --needed cpupower-gui ntfs-3g nvidia cuda nvtop vulkan-radeon
@@ -54,13 +46,6 @@ yay -S --needed cpupower-gui ntfs-3g nvidia cuda nvtop vulkan-radeon
 ```sh
 yay -S --needed cloc cronie docker gcc clang make npm python pypy python-numpy python-pandas python-scipy python-matplotlib python-requests tmux
 ```
-Enable optional services.
-```sh
-sudo systemctl enable ntpd.service
-sudo systemctl enable vnstat.service
-```
-
-
 # James new
 ```sh
 yay -S github-desktop-bin snapper-gui-git synology-drive visual-studio-code-bin
@@ -79,34 +64,22 @@ sudo pacman -S chezmoi bat bluetui gnome-keyring seahorse mise nvidia-settings p
 
 ### Dependencies
 
-#### Base (~190 Mib)
-- `dhcpcd` - DHCP client *(optional)*  
-- `pulseaudio` - sound server for handling audio
-- `xorg` - display server
-
 #### Programs (~607 Mib)
 - `btop` - resource monitor
 - `code` - code editor
 - `fastfetch` - system information fetcher
-- `kitty` - terminal emulator
 - `i3lock-color` - lock screen *(AUR)*
-- `mate-polkit` - controlling system-wide privileges
-- `mpd` - music playback service
-- `ncmpcpp` - MPD client
 - `papirus-icon-theme` - modern icon pack
 - `picom` - compositor for X11
 - `polybar` - status bar
 - `zsh` - shell
-- `zed` - code editor
 
 #### Fonts (~1040 Mib)
 - `ttf-roboto-mono ttf-iosevka-nerd`
 
 #### Scripts (~3 Mib)
-- `ffcast` - script for recording your screen *(AUR)* 
 - `inotify-tools` - command-line utilities for monitoring filesystem events
 - `libnotify` - library for sending desktop notifications  
-- `rofi-vscode-mode` - lauch recently used vsc workspace
 - `slop` - select a region on screen
 - `xclip` - clipboard manager for X
 
@@ -116,19 +89,17 @@ I recommend atleast installing basic utilities.
 To install all packages, you need approximately 8.4 GiB of free disk space (5 GiB takes cuda package).
 
 #### Basic utilities (optional) (~21 Mib)
-`yay -S bc fzf mpc nano vim net-tools tree`
+`yay -S bc fzf neovim net-tools tree`
 - `bc` - command-line calculator  
 - `fzf` - fuzzy finder  
-- `mpc` - comand-line MPD client  
-- `nano vim` - text editors  
+- `neovim` - text editor  
 - `net-tools` - network tools  
 - `tree` - directory tree viewer  
 
 #### Basic programs (optional) (~1700Mib)
-`yay -S 7zip czkawka-gui firefox-beta-bin firefox-developer-edition gimp inkscape gparted libreoffice-fresh vlc nemo nemo-fileroller obs-studio obsidian qalculate-gtk vnstat yt-dlp`
+`yay -S 7zip firefox-developer-edition gimp inkscape gparted libreoffice-fresh vlc nemo nemo-fileroller obs-studio obsidian qalculate-gtk yt-dlp`
 - `7zip` - archiver  
-- `czkawka-gui` - duplicate finder  
-- `firefox-beta-bin firefox-developer-edition`  - web browsers
+- `firefox-developer-edition`  - web browser
 - `gimp inkscape` - image editors
 - `gparted` - partition tool
 - `libreoffice-fresh` - office suite  
@@ -137,7 +108,6 @@ To install all packages, you need approximately 8.4 GiB of free disk space (5 Gi
 - `obs-studio` - screen recorder  
 - `obsidian` - notes app  
 - `qalculate-gtk` - calculator with advanced functions
-- `vnstat` - network monitor 
 - `yt-dlp` - video downloader  
 
 #### Drivers (optional) (~4900 Mib)
@@ -170,7 +140,6 @@ To install all packages, you need approximately 8.4 GiB of free disk space (5 Gi
 | `Mod + E` | Open file manager (Nemo) | `Mod + 1 to 0` | Switch to workspaces 1 to 10 |
 | `Mod + A` | Open menu (drun version) | `Mod + Shift + 1 to 0` | Move focused window to workspaces 1 to 10 |
 | `Mod + S` | Open screenshots dir in Nemo | `Mod + Shift + E` | Exit i3 |
-| `Mod + Z` | Launch ncmpcpp | `Mod + Shift + R` | Restart i3 |
 | `Mod + X` | Open powermenu | `Mod + Shift + C` | Reload i3 config file |
 | `Mod + C` | Launch screenshot script | `Mod + B` | Move workspace to the other monitor |
 | `Mod + I` | Lock screen | `Mod + N` | Set dual monitor mode |
