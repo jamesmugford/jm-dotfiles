@@ -35,17 +35,13 @@ rm -rf ~/.config/nvim/.git
 
 Install optional dependencies.
 ```sh
-yay -S --needed bc fzf neovim net-tools tree
+yay -S --needed bc fzf neovim
 ```
 ```sh
-yay -S --needed 7zip firefox-developer-edition gimp inkscape gparted libreoffice-fresh vlc nemo nemo-fileroller obs-studio obsidian qalculate-gtk yt-dlp
+yay -S --needed 7zip firefox-developer-edition gimp inkscape gparted libreoffice-fresh vlc obs-studio obsidian qalculate-gtk
 ```
-```sh
-yay -S --needed cpupower-gui ntfs-3g nvidia cuda nvtop vulkan-radeon
-```
-```sh
-yay -S --needed cloc cronie docker gcc clang make npm python pypy python-numpy python-pandas python-scipy python-matplotlib python-requests tmux
-```
+
+
 # James new
 ```sh
 yay -S github-desktop-bin snapper-gui-git synology-drive visual-studio-code-bin
@@ -59,73 +55,6 @@ yay -S plex-desktop
 sudo pacman -S chezmoi bat bluetui gnome-keyring seahorse mise nvidia-settings pavucontrol snixembed yazi
 ```
 
-
-
-
-### Dependencies
-
-#### Programs (~607 Mib)
-- `btop` - resource monitor
-- `code` - code editor
-- `fastfetch` - system information fetcher
-- `i3lock-color` - lock screen *(AUR)*
-- `papirus-icon-theme` - modern icon pack
-- `picom` - compositor for X11
-- `polybar` - status bar
-- `zsh` - shell
-
-#### Fonts (~1040 Mib)
-- `ttf-roboto-mono ttf-iosevka-nerd`
-
-#### Scripts (~3 Mib)
-- `inotify-tools` - command-line utilities for monitoring filesystem events
-- `libnotify` - library for sending desktop notifications  
-- `slop` - select a region on screen
-- `xclip` - clipboard manager for X
-
-### Additional dependencies
-All of these packages are optional, but without them, some things may not work correctly.
-I recommend atleast installing basic utilities.
-To install all packages, you need approximately 8.4 GiB of free disk space (5 GiB takes cuda package).
-
-#### Basic utilities (optional) (~21 Mib)
-`yay -S bc fzf neovim net-tools tree`
-- `bc` - command-line calculator  
-- `fzf` - fuzzy finder  
-- `neovim` - text editor  
-- `net-tools` - network tools  
-- `tree` - directory tree viewer  
-
-#### Basic programs (optional) (~1700Mib)
-`yay -S 7zip firefox-developer-edition gimp inkscape gparted libreoffice-fresh vlc nemo nemo-fileroller obs-studio obsidian qalculate-gtk yt-dlp`
-- `7zip` - archiver  
-- `firefox-developer-edition`  - web browser
-- `gimp inkscape` - image editors
-- `gparted` - partition tool
-- `libreoffice-fresh` - office suite  
-- `vlc` - media player 
-- `nemo nemo-fileroller` - file manager  
-- `obs-studio` - screen recorder  
-- `obsidian` - notes app  
-- `qalculate-gtk` - calculator with advanced functions
-- `yt-dlp` - video downloader  
-
-#### Drivers (optional) (~4900 Mib)
-`yay -S cpupower-gui ntfs-3g nvidia cuda nvtop vulkan-radeon`
-- `cpupower-gui` - CPU settings 
-- `ntfs-3g` - NTFS filesystem support  
-- `nvidia cuda nvtop` - NVIDIA drivers
-- `vulkan-radeon` - AMD Vulkan 
-
-#### Programming (optional) (~1000Mib)
-`yay -S cloc cronie docker gcc clang make npm python pypy python-numpy python-pandas python-scipy python-matplotlib python-requests tmux`
-- `cloc` - counts lines of code  
-- `cronie` - task scheduler  
-- `docker` - container platform  
-- `gcc clang make` - compilers and build tools  
-- `npm` - Node.js package manager  
-- `python pypy python-numpy python-pandas python-scipy python-matplotlib python-requests` - Python interpreters and libraries  
-- `tmux` - terminal multiplexer  
 
 ### Keybindings Overview
 
@@ -156,11 +85,6 @@ To install all packages, you need approximately 8.4 GiB of free disk space (5 Gi
 |:------:|:--------:|:--------:|:--------:|:------:|:--------:|:-------:|:--------:|
 | `#cb5760` | `#999f63`| `#d4a067`| `#6c90a8`| `#776690`| `#528a9b`| `#ffa8c5`| `#c87c3e`|
 | ![#cb5760](https://placehold.co/77x15/cb5760/cb5760.png) | ![#999f63](https://placehold.co/77x15/999f63/999f63.png) | ![#d4a067](https://placehold.co/77x15/d4a067/d4a067.png) | ![#6c90a8](https://placehold.co/77x15/6c90a8/6c90a8.png) | ![#776690](https://placehold.co/77x15/776690/776690.png) | ![#528a9b](https://placehold.co/77x15/528a9b/528a9b.png) | ![#ffa8c5](https://placehold.co/77x15/ffa8c5/ffa8c5.png) | ![#c87c3e](https://placehold.co/77x15/c87c3e/c87c3e.png) |
-
-## License
-  
-Distributed under the **[GPLv3+](https://www.gnu.org/licenses/gpl-3.0.html) License**.    
-Copyright (C) 2025-2026 James Mugford.
 
 
 
