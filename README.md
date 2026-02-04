@@ -6,7 +6,7 @@ EndeavourOS i3 (X11) dotfiles managed with chezmoi.
 Base system handled by the EndeavourOS installer.
 Install core packages.
 ```sh
-yay -S --needed chezmoi btop code fastfetch alacritty papirus-icon-theme picom zsh ttf-roboto-mono ttf-iosevka-nerd inotify-tools libnotify slop xclip neovim
+sudo pacman -S --needed chezmoi btop code fastfetch alacritty papirus-icon-theme picom zsh ttf-roboto-mono ttf-iosevka-nerd inotify-tools libnotify slop xclip neovim
 ```
 Apply the dotfiles.
 ```sh
@@ -27,22 +27,23 @@ rm -rf ~/.config/nvim/.git
 
 ### Utilities
 ```sh
-yay -S --needed fzf bat bluetui gnome-keyring snixembed yazi
+sudo pacman -S --needed fzf bat bluetui gnome-keyring snixembed yazi
 ```
 
 ### Apps
 ```sh
-yay -S --needed 7zip firefox-developer-edition github-desktop-bin visual-studio-code-bin gimp inkscape gparted libreoffice-fresh vlc plex-desktop nemo nemo-fileroller obs-studio obsidian qalculate-gtk pavucontrol seahorse snapper-gui-git synology-drive yt-dlp
+sudo pacman -S --needed 7zip firefox-developer-edition gimp inkscape gparted libreoffice-fresh vlc nemo nemo-fileroller obs-studio obsidian qalculate-gtk pavucontrol seahorse yt-dlp
+yay -S --needed github-desktop-bin visual-studio-code-bin plex-desktop snapper-gui-git synology-drive
 ```
 
 ### Nvidia
 ```sh
-yay -S --needed nvidia-settings nvtop
+sudo pacman -S --needed nvidia-settings nvtop
 ```
 
 ### Programming
 ```sh
-yay -S --needed mise
+sudo pacman -S --needed mise
 ```
 
 ## Keybindings Overview
