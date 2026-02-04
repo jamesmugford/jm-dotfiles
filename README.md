@@ -6,7 +6,7 @@ EndeavourOS i3 (X11) dotfiles managed with chezmoi.
 Base system handled by the EndeavourOS installer.
 Install core packages.
 ```sh
-yay -S --needed btop code fastfetch alacritty papirus-icon-theme picom zsh ttf-roboto-mono ttf-iosevka-nerd inotify-tools libnotify slop xclip
+yay -S --needed chezmoi btop code fastfetch alacritty papirus-icon-theme picom zsh ttf-roboto-mono ttf-iosevka-nerd inotify-tools libnotify slop xclip neovim
 ```
 Apply the dotfiles.
 ```sh
@@ -27,22 +27,22 @@ rm -rf ~/.config/nvim/.git
 
 ### Utilities
 ```sh
-yay -S --needed bc fzf neovim net-tools tree
+yay -S --needed fzf bat bluetui gnome-keyring snixembed yazi
 ```
 
 ### Apps
 ```sh
-yay -S --needed 7zip firefox-developer-edition gimp inkscape gparted libreoffice-fresh vlc nemo nemo-fileroller obs-studio obsidian qalculate-gtk yt-dlp
+yay -S --needed 7zip firefox-developer-edition github-desktop-bin visual-studio-code-bin gimp inkscape gparted libreoffice-fresh vlc plex-desktop nemo nemo-fileroller obs-studio obsidian qalculate-gtk pavucontrol seahorse snapper-gui-git synology-drive yt-dlp
 ```
 
-### Drivers
+### Nvidia
 ```sh
-yay -S --needed cpupower-gui ntfs-3g nvidia cuda nvtop vulkan-radeon
+yay -S --needed nvidia-settings nvtop
 ```
 
 ### Programming
 ```sh
-yay -S --needed cloc cronie docker gcc clang make npm python pypy python-numpy python-pandas python-scipy python-matplotlib python-requests tmux
+yay -S --needed mise
 ```
 
 ## Keybindings Overview
@@ -80,17 +80,6 @@ Distributed under the [GPLv3+](https://www.gnu.org/licenses/gpl-3.0.html) Licens
 Copyright (C) 2025-2026 James Mugford.
 
 ## Extras
-
-### James new
-```sh
-yay -S github-desktop-bin snapper-gui-git synology-drive visual-studio-code-bin
-```
-```sh
-yay -S plex-desktop
-```
-```sh
-sudo pacman -S chezmoi bat bluetui gnome-keyring seahorse mise nvidia-settings pavucontrol snixembed yazi
-```
 
 ### Talon
 ```sh
