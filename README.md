@@ -9,11 +9,11 @@ Built on top of Endevour OS's i3 install.
 ## Installation
 Install base system.
 ```sh
-sudo pacman -S --needed archlinux-keyring base base-devel linux linux-firmware git pulseaudio xorg xorg-xinit 
+sudo pacman -S --needed pulseaudio xorg
 ```
 Install dependencies.
 ```sh
-yay -S --needed btop code dunst fastfetch feh alacritty kitty mate-polkit mpd ncmpcpp papirus-icon-theme picom xss-lock zsh zed ttf-roboto-mono ttf-opensans ttf-iosevka-nerd ffcast inotify-tools jq libnotify rofi-vscode-mode scrot slop upower xclip
+yay -S --needed btop code fastfetch alacritty kitty mate-polkit mpd ncmpcpp papirus-icon-theme picom zsh zed ttf-roboto-mono ttf-iosevka-nerd ffcast inotify-tools libnotify rofi-vscode-mode slop xclip
 ```
 
 Clone this repository and copy files.
@@ -37,16 +37,16 @@ rm -rf ~/.config/nvim/.git
 
 
 ```sh
-yay -S dhcpcd iwd
-sudo systemctl enable --now dhcpcd.service iwd.service
+yay -S dhcpcd
+sudo systemctl enable --now dhcpcd.service
 ```
 
 Install optional dependencies.
 ```sh
-yay -S --needed bc dmenu downgrade fzf mpc nano vim net-tools ntp tree vi wget
+yay -S --needed bc fzf mpc nano vim net-tools tree
 ```
 ```sh
-yay -S --needed 7zip czkawka-gui firefox firefox-beta-bin firefox-developer-edition gimp inkscape gparted libreoffice-fresh mpv vlc nemo nemo-fileroller obs-studio obsidian qalculate-gtk rsync vnstat yt-dlp
+yay -S --needed 7zip czkawka-gui firefox-beta-bin firefox-developer-edition gimp inkscape gparted libreoffice-fresh vlc nemo nemo-fileroller obs-studio obsidian qalculate-gtk vnstat yt-dlp
 ```
 ```sh
 yay -S --needed cpupower-gui ntfs-3g nvidia cuda nvtop vulkan-radeon
@@ -54,10 +54,6 @@ yay -S --needed cpupower-gui ntfs-3g nvidia cuda nvtop vulkan-radeon
 ```sh
 yay -S --needed cloc cronie docker gcc clang make npm python pypy python-numpy python-pandas python-scipy python-matplotlib python-requests tmux
 ```
-```sh
-yay -S --needed noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra
-```
-
 Enable optional services.
 ```sh
 sudo systemctl enable ntpd.service
@@ -84,21 +80,14 @@ sudo pacman -S chezmoi bat bluetui gnome-keyring seahorse mise nvidia-settings p
 ### Dependencies
 
 #### Base (~190 Mib)
-- `archlinux-keyring base base-devel linux linux-firmware`  - base
 - `dhcpcd` - DHCP client *(optional)*  
-- `git` - version control system
-- `iwd`- wireless network daemon *(optional)*  
 - `pulseaudio` - sound server for handling audio
 - `xorg` - display server
-- `xorg-xinit` - script to manually start the X server without a display manager *(optional)*  
 
 #### Programs (~607 Mib)
 - `btop` - resource monitor
 - `code` - code editor
-- `dunst` - notification deamon
 - `fastfetch` - system information fetcher
-- `feh` - wallpaper setter  
-- `i3-wm` - dynamic tiling window manager  
 - `kitty` - terminal emulator
 - `i3lock-color` - lock screen *(AUR)*
 - `mate-polkit` - controlling system-wide privileges
@@ -107,23 +96,18 @@ sudo pacman -S chezmoi bat bluetui gnome-keyring seahorse mise nvidia-settings p
 - `papirus-icon-theme` - modern icon pack
 - `picom` - compositor for X11
 - `polybar` - status bar
-- `rofi` - application launcher
-- `xss-lock` - hooks into XScreenSaver events to lock the screen when idle
 - `zsh` - shell
 - `zed` - code editor
 
 #### Fonts (~1040 Mib)
-- `ttf-roboto-mono ttf-opensans ttf-iosevka-nerd`
+- `ttf-roboto-mono ttf-iosevka-nerd`
 
 #### Scripts (~3 Mib)
 - `ffcast` - script for recording your screen *(AUR)* 
 - `inotify-tools` - command-line utilities for monitoring filesystem events
-- `jq` - JSON processor  
 - `libnotify` - library for sending desktop notifications  
 - `rofi-vscode-mode` - lauch recently used vsc workspace
-- `scrot` - screenshot utility  
 - `slop` - select a region on screen
-- `upower` - power management daemon
 - `xclip` - clipboard manager for X
 
 ### Additional dependencies
@@ -132,33 +116,27 @@ I recommend atleast installing basic utilities.
 To install all packages, you need approximately 8.4 GiB of free disk space (5 GiB takes cuda package).
 
 #### Basic utilities (optional) (~21 Mib)
-`yay -S bc dmenu downgrade fzf mpc nano vim net-tools ntp tree vi wget`
+`yay -S bc fzf mpc nano vim net-tools tree`
 - `bc` - command-line calculator  
-- `dmenu` - app launcher  
-- `downgrade` - pkg downgrader  
 - `fzf` - fuzzy finder  
 - `mpc` - comand-line MPD client  
 - `nano vim` - text editors  
 - `net-tools` - network tools  
-- `ntp` - time sync  
 - `tree` - directory tree viewer  
-- `vi` - basic text editor  
-- `wget` - command-line downloader  
 
 #### Basic programs (optional) (~1700Mib)
-`yay -S 7zip czkawka-gui firefox firefox-beta-bin firefox-developer-edition gimp inkscape gparted libreoffice-fresh mpv vlc nemo nemo-fileroller obs-studio obsidian qalculate-gtk rsync vnstat yt-dlp`
+`yay -S 7zip czkawka-gui firefox-beta-bin firefox-developer-edition gimp inkscape gparted libreoffice-fresh vlc nemo nemo-fileroller obs-studio obsidian qalculate-gtk vnstat yt-dlp`
 - `7zip` - archiver  
 - `czkawka-gui` - duplicate finder  
-- `firefox firefox-beta-bin firefox-developer-edition`  - web browsers
+- `firefox-beta-bin firefox-developer-edition`  - web browsers
 - `gimp inkscape` - image editors
 - `gparted` - partition tool
 - `libreoffice-fresh` - office suite  
-- `mpv vlc` - media players 
+- `vlc` - media player 
 - `nemo nemo-fileroller` - file manager  
 - `obs-studio` - screen recorder  
 - `obsidian` - notes app  
 - `qalculate-gtk` - calculator with advanced functions
-- `rsync` - file sync and backup  
 - `vnstat` - network monitor 
 - `yt-dlp` - video downloader  
 
@@ -178,10 +156,6 @@ To install all packages, you need approximately 8.4 GiB of free disk space (5 Gi
 - `npm` - Node.js package manager  
 - `python pypy python-numpy python-pandas python-scipy python-matplotlib python-requests` - Python interpreters and libraries  
 - `tmux` - terminal multiplexer  
-
-####  Emoji fonts (~750 MiB)
-`yay -S noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra`
-- `noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra`
 
 ### Keybindings Overview
 
