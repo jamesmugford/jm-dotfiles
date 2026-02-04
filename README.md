@@ -1,62 +1,51 @@
-# James Mugford's Dotfiles. 
+# James Mugford's Dotfiles
 
-System:
-Arch, Chezmoi. 
-Built on top of Endevour OS's i3 install.
+EndeavourOS i3 (X11) dotfiles managed with chezmoi.
 
-### [Installation](#installation) · [Contributions](#support-and-contributions) · [Detailed information](#detailed-information)
-
-## Installation
-Base system handled by EndeavourOS installer.
-Install dependencies.
+## Quick start
+Base system handled by the EndeavourOS installer.
+Install core packages.
 ```sh
 yay -S --needed btop code fastfetch alacritty papirus-icon-theme picom zsh ttf-roboto-mono ttf-iosevka-nerd inotify-tools libnotify slop xclip
 ```
-
-Clone this repository and copy files.
+Apply the dotfiles.
 ```sh
-# Install
 git clone https://github.com/jamesmugford/jm-dotfiles.git .local/share/chezmoi
 chezmoi apply
 ```
-
-
-
 Set zsh as default shell.
 ```sh
 chsh -s /bin/zsh
 ```
-
+Optional: Neovim starter.
 ```sh
 git clone https://github.com/LazyVim/starter ~/.config/nvim
 rm -rf ~/.config/nvim/.git
 ```
 
+## Optional packages
 
-Install optional dependencies.
+### Utilities
 ```sh
-yay -S --needed bc fzf neovim
-```
-```sh
-yay -S --needed 7zip firefox-developer-edition gimp inkscape gparted libreoffice-fresh vlc obs-studio obsidian qalculate-gtk
+yay -S --needed bc fzf neovim net-tools tree
 ```
 
-
-# James new
+### Apps
 ```sh
-yay -S github-desktop-bin snapper-gui-git synology-drive visual-studio-code-bin
+yay -S --needed 7zip firefox-developer-edition gimp inkscape gparted libreoffice-fresh vlc nemo nemo-fileroller obs-studio obsidian qalculate-gtk yt-dlp
 ```
 
+### Drivers
 ```sh
-yay -S plex-desktop
+yay -S --needed cpupower-gui ntfs-3g nvidia cuda nvtop vulkan-radeon
 ```
 
+### Programming
 ```sh
-sudo pacman -S chezmoi bat bluetui gnome-keyring seahorse mise nvidia-settings pavucontrol snixembed yazi
+yay -S --needed cloc cronie docker gcc clang make npm python pypy python-numpy python-pandas python-scipy python-matplotlib python-requests tmux
 ```
 
-
-### Keybindings Overview
+## Keybindings Overview
 
 | Keybinding | Action | Keybinding | Action |
 |---|---|---|---|
@@ -74,7 +63,7 @@ sudo pacman -S chezmoi bat bluetui gnome-keyring seahorse mise nvidia-settings p
 | `Mod + I` | Lock screen | `Mod + N` | Set dual monitor mode |
 | `Mod + G` | Enter gap mode | `Mod + M` | Set single-monitor mode |
 
-### Color palette
+## Color palette
 
 |   Bg   |   Bg 2   |   Bg 3   |  Border  |   Fg   |  White   |  Gray   |  Black   |
 |:------:|:--------:|:--------:|:--------:|:------:|:--------:|:-------:|:--------:|
@@ -86,40 +75,51 @@ sudo pacman -S chezmoi bat bluetui gnome-keyring seahorse mise nvidia-settings p
 | `#cb5760` | `#999f63`| `#d4a067`| `#6c90a8`| `#776690`| `#528a9b`| `#ffa8c5`| `#c87c3e`|
 | ![#cb5760](https://placehold.co/77x15/cb5760/cb5760.png) | ![#999f63](https://placehold.co/77x15/999f63/999f63.png) | ![#d4a067](https://placehold.co/77x15/d4a067/d4a067.png) | ![#6c90a8](https://placehold.co/77x15/6c90a8/6c90a8.png) | ![#776690](https://placehold.co/77x15/776690/776690.png) | ![#528a9b](https://placehold.co/77x15/528a9b/528a9b.png) | ![#ffa8c5](https://placehold.co/77x15/ffa8c5/ffa8c5.png) | ![#c87c3e](https://placehold.co/77x15/c87c3e/c87c3e.png) |
 
+## License
+Distributed under the [GPLv3+](https://www.gnu.org/licenses/gpl-3.0.html) License.
+Copyright (C) 2025-2026 James Mugford.
 
+## Extras
 
-# Upstream (Tracked)
+### James new
+```sh
+yay -S github-desktop-bin snapper-gui-git synology-drive visual-studio-code-bin
+```
+```sh
+yay -S plex-desktop
+```
+```sh
+sudo pacman -S chezmoi bat bluetui gnome-keyring seahorse mise nvidia-settings pavucontrol snixembed yazi
+```
+
+### Talon
+```sh
+mkdir -p "$HOME/.local/opt/talon" &&
+  tar -Jxf $HOME/Downloads/talon-linux-*.tar.xz --directory="$HOME/.local/opt"
+git clone https://github.com/talonhub/community $HOME/.talon/user/community
+git clone https://github.com/jamesmugford/jm-talon $HOME/.talon/user/jm-talon
+```
+
+### Notes
+Stop screen tearing: https://wiki.archlinux.org/title/NVIDIA/Troubleshooting#Avoid_screen_tearing
+https://github.com/ChrisTitusTech/linutil
+
+## Upstream (Tracked)
 * https://github.com/endeavouros-team/endeavouros-i3wm-setup/commits/main/
 * https://github.com/Keyitdev/dotfiles/
 
-# Chezmoi Cheat Sheet
+## Chezmoi Cheat Sheet
+```sh
 chezmoi init
 chezmoi add ~/.bashrc
 chezmoi edit ~/.bashrc
 chezmoi diff
 chezmoi -v apply
+```
 
-# Todo
-
+## Todo
 install catpuccin theme
 
 ## Todo Install
 howdy
 espanso
-
-
-
-# Extra
-
-## Talon
-mkdir -p "$HOME/.local/opt/talon" &&
-  tar -Jxf $HOME/Downloads/talon-linux-*.tar.xz --directory="$HOME/.local/opt"
-git clone https://github.com/talonhub/community     $HOME/.talon/user/community
-git clone https://github.com/jamesmugford/jm-talon  $HOME/.talon/user/jm-talon
-
-
-*Stop screen tearing*: https://wiki.archlinux.org/title/NVIDIA/Troubleshooting#Avoid_screen_tearing
-
-
-
-https://github.com/ChrisTitusTech/linutil
