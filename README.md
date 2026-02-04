@@ -32,9 +32,15 @@ sudo pacman -S --needed fzf bat bluetui gnome-keyring snixembed yazi
 
 ### Apps
 ```sh
-sudo pacman -S --needed 7zip firefox-developer-edition gimp inkscape gparted libreoffice-fresh vlc nemo nemo-fileroller obs-studio obsidian qalculate-gtk pavucontrol seahorse yt-dlp
+sudo pacman -S --needed 7zip firefox-developer-edition gimp inkscape gparted libreoffice-fresh vlc nemo nemo-fileroller obs-studio obsidian qalculate-gtk pavucontrol seahorse keepassxc chromium
 yay -S --needed github-desktop-bin visual-studio-code-bin plex-desktop snapper-gui-git synology-drive
 ```
+
+### 3D
+```sh
+sudo pacman -S blender 
+```
+
 
 ### Nvidia
 ```sh
