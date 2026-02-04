@@ -64,6 +64,8 @@ sudo systemctl enable ntpd.service
 sudo systemctl enable vnstat.service
 ```
 
+
+# James new
 ```sh
 yay -S github-desktop-bin snapper-gui-git synology-drive visual-studio-code-bin
 ```
@@ -72,8 +74,9 @@ yay -S github-desktop-bin snapper-gui-git synology-drive visual-studio-code-bin
 yay -S plex-desktop
 ```
 
-chezmoi bat bluetui gnome-keyring mise
-
+```sh
+sudo pacman -S chezmoi bat bluetui gnome-keyring seahorse mise nvidia-settings pavucontrol snixembed yazi
+```
 
 
 
