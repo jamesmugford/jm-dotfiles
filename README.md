@@ -31,6 +31,12 @@ chsh -s /bin/zsh
 ```
 
 ```sh
+git clone https://github.com/LazyVim/starter ~/.config/nvim
+rm -rf ~/.config/nvim/.git
+```
+
+
+```sh
 yay -S dhcpcd iwd
 sudo systemctl enable --now dhcpcd.service iwd.service
 ```
@@ -65,6 +71,11 @@ yay -S github-desktop-bin snapper-gui-git synology-drive visual-studio-code-bin
 ```sh
 yay -S plex-desktop
 ```
+
+chezmoi bat bluetui gnome-keyring mise
+
+
+
 
 
 ### Dependencies
