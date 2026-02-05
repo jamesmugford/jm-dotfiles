@@ -41,6 +41,7 @@ yay -S --needed github-desktop-bin jetbrains-toolbox visual-studio-code-bin open
 sudo pacman -S blender 
 yay -S --needed spacenavd spnavcfg 
 ```
+https://aur.archlinux.org/packages/unreal-engine-bin
 
 
 ### Nvidia
@@ -83,11 +84,11 @@ sudo pacman -S --needed mise
 | `#cb5760` | `#999f63`| `#d4a067`| `#6c90a8`| `#776690`| `#528a9b`| `#ffa8c5`| `#c87c3e`|
 | ![#cb5760](https://placehold.co/77x15/cb5760/cb5760.png) | ![#999f63](https://placehold.co/77x15/999f63/999f63.png) | ![#d4a067](https://placehold.co/77x15/d4a067/d4a067.png) | ![#6c90a8](https://placehold.co/77x15/6c90a8/6c90a8.png) | ![#776690](https://placehold.co/77x15/776690/776690.png) | ![#528a9b](https://placehold.co/77x15/528a9b/528a9b.png) | ![#ffa8c5](https://placehold.co/77x15/ffa8c5/ffa8c5.png) | ![#c87c3e](https://placehold.co/77x15/c87c3e/c87c3e.png) |
 
-## License
-Distributed under the [GPLv3+](https://www.gnu.org/licenses/gpl-3.0.html) License.
-Copyright (C) 2025-2026 James Mugford.
 
 ## Extras
+
+[Secure boot with sbctl](https://wiki.cachyos.org/configuration/secure_boot_setup/)
+
 
 ### Talon
 ```sh
@@ -114,9 +115,3 @@ chezmoi diff
 chezmoi -v apply
 ```
 
-## Todo
-install catpuccin theme
-
-## Todo Install
-howdy
-espanso
