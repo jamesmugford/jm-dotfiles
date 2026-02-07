@@ -39,6 +39,29 @@ yay -S --needed spacenavd spnavcfg
 ```
 https://aur.archlinux.org/packages/unreal-engine-bin
 
+### Unreal Engine (AUR, system-wide)
+
+```sh
+mkdir -p ~/build/aur
+rm -rf ~/build/aur/unreal-engine-bin
+git clone https://aur.archlinux.org/unreal-engine-bin.git ~/build/aur/unreal-engine-bin
+cd ~/build/aur/unreal-engine-bin
+
+# Apply patch copied from AUR comments
+patch -p1 < ~/patches/aur-ue-5.7.0-to-5.7.2.patch
+
+# Download from https://www.unrealengine.com/linux
+# If your browser renamed it (for example with " (1)"), adjust the source filename.
+cp ~/Downloads/Linux_Unreal_Engine_5.7.2.zip .
+
+makepkg -si
+
+# Optional cleanup
+cd ~/build/aur && rm -rf unreal-engine-bin
+```
+
+For future versions, update the patch filename and the zip version in the `cp` command.
+
 
 ### Nvidia
 ```sh
@@ -110,4 +133,3 @@ chezmoi edit ~/.bashrc
 chezmoi diff
 chezmoi -v apply
 ```
-
