@@ -6,16 +6,12 @@ EndeavourOS i3 (X11) dotfiles managed with chezmoi.
 Base system handled by the EndeavourOS installer.
 Install core packages.
 ```sh
-sudo pacman -S --needed chezmoi btop code fastfetch alacritty papirus-icon-theme picom zsh ttf-roboto-mono ttf-iosevka-nerd inotify-tools libnotify slop xclip neovim autotiling
+sudo pacman -S --needed chezmoi btop code fastfetch alacritty papirus-icon-theme picom ttf-jetbrains-mono-nerd neovim autotiling lazygit
 ```
 Apply the dotfiles.
 ```sh
 git clone https://github.com/jamesmugford/jm-dotfiles.git .local/share/chezmoi
 chezmoi apply
-```
-Set zsh as default shell.
-```sh
-chsh -s /bin/zsh
 ```
 Optional: Neovim starter.
 ```sh
@@ -32,8 +28,8 @@ sudo pacman -S --needed fzf bat bluetui gnome-keyring snixembed yazi
 
 ### Apps
 ```sh
-sudo pacman -S --needed 7zip firefox-developer-edition gimp inkscape gparted libreoffice-fresh vlc nemo nemo-fileroller obs-studio obsidian qalculate-gtk pavucontrol seahorse keepassxc chromium
-yay -S --needed github-desktop-bin jetbrains-toolbox visual-studio-code-bin opencode-bin plex-desktop snapper-gui-git synology-drive
+sudo pacman -S --needed 7zip firefox-developer-edition gimp inkscape gparted obs-studio obsidian qalculate-gtk pavucontrol seahorse keepassxc chromium
+yay -S --needed github-desktop-bin jetbrains-toolbox visual-studio-code-bin opencode-bin snapper-gui-git synology-drive
 ```
 
 ### 3D
