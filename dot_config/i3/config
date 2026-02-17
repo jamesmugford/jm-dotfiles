@@ -66,6 +66,9 @@ gaps outer 3
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+focus_follows_mouse no
+focus_on_window_activation none
+
 # switch/iterate between workspaces
 bindsym $mod+Tab workspace next
 bindsym $mod+Shift+Tab workspace prev
@@ -371,6 +374,14 @@ for_window [class="Bluetooth-sendto" instance="bluetooth-sendto"] floating enabl
 for_window [class="Pamac-manager"] floating enable
 for_window [window_role="About"] floating enable
 
+# Unreal Engine windows
+for_window [class="UnrealEditor"] floating enable
+for_window [class="UE4Editor"] floating enable
+for_window [class="UnrealEditor" window_type="utility"] no_focus
+for_window [class="UnrealEditor" window_type="dialog"] no_focus
+for_window [class="UE4Editor" window_type="utility"] no_focus
+for_window [class="UE4Editor" window_type="dialog"] no_focus
+
 # set border of floating window
 for_window [class="urxvt"] border pixel 1
 
@@ -620,10 +631,5 @@ exec --no-startup-id gnome-keyring-daemon --start --components=secrets
 bindsym XF86PowerOff exec --no-startup-id sh -c 'i3lock -c 000000 && systemctl suspend'
 
 
-
-# 1) disable Caps' lock behavior, then remap its keycode to F16
-exec_always --no-startup-id setxkbmap -option caps:none
-exec_always --no-startup-id xmodmap -e 'keycode 66 = F16' -e 'clear Lock'
-
-# UE5 windows always floating
-for_window [class="UnrealEditor"] floating enable, focus
+# 1) disable Caps' lock behavior, then remap its keycode to AltGr
+exec_always --no-startup-id setxkbmap -option caps:none; xmodmap -e "keycode 66 = ISO_Level3_Shift" -e "clear Lock"
