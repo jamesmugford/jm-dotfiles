@@ -632,4 +632,4 @@ bindsym XF86PowerOff exec --no-startup-id sh -c 'i3lock -c 000000 && systemctl s
 
 
 # 1) disable Caps' lock behavior, then remap its keycode to AltGr
-exec_always --no-startup-id setxkbmap -option caps:none; xmodmap -e "keycode 66 = ISO_Level3_Shift" -e "clear Lock"
+exec_always --no-startup-id setxkbmap -option caps:none; xmodmap -e "keycode 66 = f2" -e "clear Lock"

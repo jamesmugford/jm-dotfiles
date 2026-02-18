@@ -115,6 +115,7 @@ mkdir -p "$HOME/.local/opt/talon" &&
   tar -Jxf $HOME/Downloads/talon-linux-*.tar.xz --directory="$HOME/.local/opt"
 git clone https://github.com/talonhub/community $HOME/.talon/user/community
 git clone https://github.com/jamesmugford/jm-talon $HOME/.talon/user/jm-talon
+git clone https://github.com/jamesmugford/jm-talon-lite $HOME/.talon/user/jm-talon-lite
 ```
 
 ### Notes
