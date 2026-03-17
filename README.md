@@ -104,6 +104,12 @@ sudo pacman -S --needed mise
 | ![#cb5760](https://placehold.co/77x15/cb5760/cb5760.png) | ![#999f63](https://placehold.co/77x15/999f63/999f63.png) | ![#d4a067](https://placehold.co/77x15/d4a067/d4a067.png) | ![#6c90a8](https://placehold.co/77x15/6c90a8/6c90a8.png) | ![#776690](https://placehold.co/77x15/776690/776690.png) | ![#528a9b](https://placehold.co/77x15/528a9b/528a9b.png) | ![#ffa8c5](https://placehold.co/77x15/ffa8c5/ffa8c5.png) | ![#c87c3e](https://placehold.co/77x15/c87c3e/c87c3e.png) |
 
 
+## Niri outputs Toggle
+```sh
+ln -sfn "$HOME/.config/niri/outputs-primary.kdl" "$HOME/.config/niri/outputs-current.kdl"
+
+```
+
 ## Extras
 
 [Secure boot with sbctl](https://wiki.cachyos.org/configuration/secure_boot_setup/)
