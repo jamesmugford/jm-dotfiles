@@ -1,0 +1,13 @@
+output "ASUSTek COMPUTER INC PG42UQ N7LMTF015398" {
+    mode "3840x2160@119.999"
+    scale 1.25
+    position x=0 y=0
+    variable-refresh-rate
+    focus-at-startup
+}
+
+output "Wacom Tech CintiqPro24PT 9HH00G1000636" {
+    off
+    mode "3840x2160@60.000"
+    scale 1.75
+}

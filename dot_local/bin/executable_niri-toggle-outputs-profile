@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+CFG_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/niri"
+LINK="$CFG_DIR/outputs-current.kdl"
+PRIMARY="$CFG_DIR/outputs-primary.kdl"
+SECONDARY="$CFG_DIR/outputs-secondary.kdl"
+
+current_target="$(readlink -f "$LINK" 2>/dev/null || true)"
+primary_target="$(readlink -f "$PRIMARY")"
+
+if [ "$current_target" = "$primary_target" ]; then
+    ln -sfn "$SECONDARY" "$LINK"
+else
+    ln -sfn "$PRIMARY" "$LINK"
+fi
+
+niri msg action load-config-file
