@@ -1,5 +1,5 @@
 binds {
-    Mod+F10 hotkey-overlay-title="Toggle Output Profile" {
+    Mod+Shift+D hotkey-overlay-title="Toggle Output Profile" {
         spawn "~/.local/bin/niri-toggle-outputs-profile";
     }
 }
