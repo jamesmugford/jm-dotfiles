@@ -110,6 +110,25 @@ ln -sfn "$HOME/.config/niri/outputs-primary.kdl" "$HOME/.config/niri/outputs-cur
 
 ```
 
+## OpenTabletDriver
+
+```sh
+# May require more commands. See: https://opentabletdriver.net/Wiki/Install/Linux#aur-helper-method
+
+yay -S opentabletdriver
+
+systemctl --user enable opentabletdriver.service --now
+
+sudo tee /etc/udev/rules.d/99-uinput-permissions.rules >/dev/null <<'EOF'
+KERNEL=="uinput", GROUP="input", MODE="0660", TAG+="uaccess", OPTIONS+="static_node=uinput"
+EOF
+sudo udevadm control --reload
+sudo udevadm trigger /dev/uinput
+systemctl --user restart opentabletdriver
+
+```
+
+
 ## Extras
 
 [Secure boot with sbctl](https://wiki.cachyos.org/configuration/secure_boot_setup/)
