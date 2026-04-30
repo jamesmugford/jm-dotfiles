@@ -29,7 +29,7 @@ sudo pacman -S --needed fzf bat bluetui gnome-keyring snixembed yazi
 ### Apps
 ```sh
 sudo pacman -S --needed 7zip firefox-developer-edition gimp inkscape gparted obs-studio obsidian qalculate-gtk pavucontrol seahorse keepassxc chromium
-yay -S --needed github-desktop-bin jetbrains-toolbox visual-studio-code-bin opencode-bin snapper-gui-git synology-drive
+yay -S --needed github-desktop-bin jetbrains-toolbox visual-studio-code-bin opencode-bin snapper-gui-git synology-drive google-chrome
 ```
 
 ### 3D
