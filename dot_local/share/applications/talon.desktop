@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Talon
+Comment=Voice control and dictation
+TryExec=/home/yzjm/.local/opt/talon/talon
+Exec=/home/yzjm/.local/opt/talon/talon
+Icon=audio-input-microphone
+Terminal=false
+Categories=Utility;Accessibility;
