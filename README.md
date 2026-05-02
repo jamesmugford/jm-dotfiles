@@ -28,7 +28,7 @@ sudo pacman -S --needed fzf bat bluetui gnome-keyring snixembed yazi
 
 ### Apps
 ```sh
-sudo pacman -S --needed 7zip firefox-developer-edition gimp inkscape gparted obs-studio obsidian qalculate-gtk pavucontrol seahorse keepassxc chromium
+sudo pacman -S --needed 7zip firefox-developer-edition gimp inkscape gparted obs-studio obsidian qalculate-gtk pavucontrol seahorse keepassxc chromium kitty
 yay -S --needed github-desktop-bin jetbrains-toolbox visual-studio-code-bin opencode-bin snapper-gui-git synology-drive google-chrome
 ```
 
@@ -142,6 +142,11 @@ git clone https://github.com/talonhub/community $HOME/.talon/user/community
 git clone https://github.com/jamesmugford/jm-talon $HOME/.talon/user/jm-talon
 git clone https://github.com/jamesmugford/jm-talon-lite $HOME/.talon/user/jm-talon-lite
 ```
+
+
+### JM Face Gestures
+sudo firewall-cmd --permanent --add-port=11111/udp
+sudo firewall-cmd --reload
 
 ### Notes
 Stop screen tearing: https://wiki.archlinux.org/title/NVIDIA/Troubleshooting#Avoid_screen_tearing
