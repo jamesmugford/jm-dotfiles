@@ -145,6 +145,7 @@ git clone https://github.com/jamesmugford/jm-talon-lite $HOME/.talon/user/jm-tal
 
 
 ### JM Face Gestures
+git clone https://github.com/jamesmugford/jm-face-gestures.git ~/Work
 sudo firewall-cmd --permanent --add-port=11111/udp
 sudo firewall-cmd --reload
 
