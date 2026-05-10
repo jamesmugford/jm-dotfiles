@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+display="${JM_ROOTFUL_XWAYLAND_DISPLAY:-:2}"
+geometry="${JM_ROOTFUL_XWAYLAND_GEOMETRY:-1800x1000}"
+
+exec xinit /usr/bin/env bash -lc '
+openbox &
+tint2 &
+exec /opt/unreal-engine/Engine/Binaries/Linux/UnrealEditor "$@"
+' jm-rootful-unreal-editor "$@" -- /usr/bin/Xwayland "$display" \
+    -geometry "$geometry" \
+    -decorate \
+    -terminate \
+    -nolisten tcp

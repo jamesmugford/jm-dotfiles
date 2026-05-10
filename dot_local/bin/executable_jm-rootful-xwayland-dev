@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+display="${JM_ROOTFUL_XWAYLAND_DISPLAY:-:2}"
+geometry="${JM_ROOTFUL_XWAYLAND_GEOMETRY:-1800x1000}"
+client="${JM_ROOTFUL_XWAYLAND_CLIENT:-openbox & tint2 & exec xterm -title jm-rootful-xwayland-dev -geometry 120x30}"
+
+exec xinit /usr/bin/env bash -lc "$client" -- /usr/bin/Xwayland "$display" \
+    -geometry "$geometry" \
+    -decorate \
+    -terminate \
+    -nolisten tcp

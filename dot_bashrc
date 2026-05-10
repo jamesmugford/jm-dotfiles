@@ -12,7 +12,6 @@ PS1='[\u@\h \W]\$ '
 # Set default editor to nvim
 export EDITOR='nvim'
 
-
 # File system
 #alias ls='eza -lh --group-directories-first --icons=auto'
 alias lsa='ls -a'
@@ -48,3 +47,6 @@ alias g='git'
 alias gcm='git commit -m'
 alias gcam='git commit -a -m'
 alias gcad='git commit -a --amend'
+
+# settings for wayland
+export QT_QPA_PLATFORM="xcb"
