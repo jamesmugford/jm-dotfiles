@@ -5,3 +5,7 @@ x-scheme-handler/http=firefox.desktop
 x-scheme-handler/https=firefox.desktop
 x-scheme-handler/terminal=kitty.desktop
 text/plain=alacritty-nvim.desktop
+application/x-synology-drive-doc=synology-drive-open-file.desktop
+application/x-synology-drive-sheet=synology-drive-open-file.desktop
+application/x-synology-drive-slides=synology-drive-open-file.desktop
+x-scheme-handler/jetbrains=jetbrainsd.desktop

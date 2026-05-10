@@ -3,17 +3,23 @@
 EndeavourOS i3 (X11) dotfiles managed with chezmoi.
 
 ## Quick start
+
 Base system handled by the EndeavourOS installer.
 Install core packages.
+
 ```sh
 sudo pacman -S --needed chezmoi btop code fastfetch alacritty papirus-icon-theme picom ttf-jetbrains-mono-nerd neovim autotiling lazygit
 ```
+
 Apply the dotfiles.
+
 ```sh
 git clone https://github.com/jamesmugford/jm-dotfiles.git .local/share/chezmoi
 chezmoi apply
 ```
+
 Optional: Neovim starter.
+
 ```sh
 git clone https://github.com/LazyVim/starter ~/.config/nvim
 rm -rf ~/.config/nvim/.git
@@ -22,22 +28,25 @@ rm -rf ~/.config/nvim/.git
 ## Optional packages
 
 ### Utilities
+
 ```sh
 sudo pacman -S --needed fzf bat bluetui gnome-keyring snixembed yazi
 ```
 
 ### Apps
+
 ```sh
 sudo pacman -S --needed 7zip firefox-developer-edition gimp inkscape gparted obs-studio obsidian qalculate-gtk pavucontrol seahorse keepassxc chromium kitty
 yay -S --needed github-desktop-bin jetbrains-toolbox visual-studio-code-bin opencode-bin snapper-gui-git synology-drive google-chrome
 ```
 
 ### 3D
+
 ```sh
 sudo pacman -S blender 
 yay -S --needed spacenavd spnavcfg 
 ```
-https://aur.archlinux.org/packages/unreal-engine-bin
+<https://aur.archlinux.org/packages/unreal-engine-bin>
 
 ### Unreal Engine (AUR, system-wide)
 
@@ -62,13 +71,14 @@ cd ~/build/aur && rm -rf unreal-engine-bin
 
 For future versions, update the patch filename and the zip version in the `cp` command.
 
-
 ### Nvidia
+
 ```sh
 sudo pacman -S --needed nvidia-settings nvtop
 ```
 
 ### Programming
+
 ```sh
 sudo pacman -S --needed mise
 ```
@@ -103,8 +113,8 @@ sudo pacman -S --needed mise
 | `#cb5760` | `#999f63`| `#d4a067`| `#6c90a8`| `#776690`| `#528a9b`| `#ffa8c5`| `#c87c3e`|
 | ![#cb5760](https://placehold.co/77x15/cb5760/cb5760.png) | ![#999f63](https://placehold.co/77x15/999f63/999f63.png) | ![#d4a067](https://placehold.co/77x15/d4a067/d4a067.png) | ![#6c90a8](https://placehold.co/77x15/6c90a8/6c90a8.png) | ![#776690](https://placehold.co/77x15/776690/776690.png) | ![#528a9b](https://placehold.co/77x15/528a9b/528a9b.png) | ![#ffa8c5](https://placehold.co/77x15/ffa8c5/ffa8c5.png) | ![#c87c3e](https://placehold.co/77x15/c87c3e/c87c3e.png) |
 
-
 ## Niri outputs Toggle
+
 ```sh
 ln -sfn "$HOME/.config/niri/outputs-primary.kdl" "$HOME/.config/niri/outputs-current.kdl"
 
@@ -128,13 +138,12 @@ systemctl --user restart opentabletdriver
 
 ```
 
-
 ## Extras
 
 [Secure boot with sbctl](https://wiki.cachyos.org/configuration/secure_boot_setup/)
 
-
 ### Talon
+
 ```sh
 mkdir -p "$HOME/.local/opt/talon" &&
   tar -Jxf $HOME/Downloads/talon-linux-*.tar.xz --directory="$HOME/.local/opt"
@@ -143,21 +152,24 @@ git clone https://github.com/jamesmugford/jm-talon $HOME/.talon/user/jm-talon
 git clone https://github.com/jamesmugford/jm-talon-lite $HOME/.talon/user/jm-talon-lite
 ```
 
-
 ### JM Face Gestures
-git clone https://github.com/jamesmugford/jm-face-gestures.git ~/Work
+
+git clone <https://github.com/jamesmugford/jm-face-gestures.git> ~/Work
 sudo firewall-cmd --permanent --add-port=11111/udp
 sudo firewall-cmd --reload
 
 ### Notes
-Stop screen tearing: https://wiki.archlinux.org/title/NVIDIA/Troubleshooting#Avoid_screen_tearing
-https://github.com/ChrisTitusTech/linutil
+
+Stop screen tearing: <https://wiki.archlinux.org/title/NVIDIA/Troubleshooting#Avoid_screen_tearing>
+<https://github.com/ChrisTitusTech/linutil>
 
 ## Upstream (Tracked)
-* https://github.com/endeavouros-team/endeavouros-i3wm-setup/commits/main/
-* https://github.com/Keyitdev/dotfiles/
+
+* <https://github.com/endeavouros-team/endeavouros-i3wm-setup/commits/main/>
+* <https://github.com/Keyitdev/dotfiles/>
 
 ## Chezmoi Cheat Sheet
+
 ```sh
 chezmoi init
 chezmoi add ~/.bashrc
