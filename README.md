@@ -18,6 +18,35 @@ git clone https://github.com/jamesmugford/jm-dotfiles.git .local/share/chezmoi
 chezmoi apply
 ```
 
+## Omarchy stuff
+
+Set pacman parallel downloads to 1 to prevent timeout of Omarchy's Stable package mirror 
+sudo perl -0pi -e 's/^ParallelDownloads = 5$/ParallelDownloads = 1/m' /etc/pacman.conf
+
+### GVFS FUSE after suspend
+
+Omarchy unmounts `gvfsd-fuse` before suspend to avoid FUSE hangs. On this system it does not always come back after resume, which breaks apps that need normal paths under `/run/user/1000/gvfs` even though Nautilus, LibreOffice, and other GVFS-aware apps can still access `smb://` locations.
+
+This repo manages `~/.config/systemd/user/gvfsd-fuse.service` with `Restart=always` so systemd brings it back after Omarchy's suspend hook unmounts it. `~/.config/hypr/hypridle.conf` also restarts it after wake as a backup nudge.
+
+Manual recovery:
+
+```sh
+systemctl --user restart gvfsd-fuse.service
+```
+
+Fallback if the service is not installed yet:
+
+```sh
+/usr/lib/gvfsd-fuse "$XDG_RUNTIME_DIR/gvfs" &
+```
+
+Verify:
+
+```sh
+pgrep -af gvfsd-fuse
+findmnt /run/user/1000/gvfs
+```
 
 ## Optional packages
 
@@ -96,12 +125,6 @@ systemctl --user restart opentabletdriver
 ### Talon
 
 ```sh
-mkdir -p "$HOME/.local/opt/talon" &&
-  tar -Jxf $HOME/Downloads/talon-linux-*.tar.xz --directory="$HOME/.local/opt"
-git clone https://github.com/talonhub/community $HOME/.talon/user/community
-git clone https://github.com/jamesmugford/jm-talon $HOME/.talon/user/jm-talon
-git clone https://github.com/jamesmugford/jm-talon-lite $HOME/.talon/user/jm-talon-lite
-```
 
 ### JM Face Gestures
 
