@@ -124,13 +124,13 @@ systemctl --user restart opentabletdriver
 
 ### Talon
 
-```sh
-
 ### JM Face Gestures
 
+```sh
 git clone <https://github.com/jamesmugford/jm-face-gestures.git> ~/Projects
 sudo firewall-cmd --permanent --add-port=11111/udp
 sudo firewall-cmd --reload
+```
 
 ### Notes
 
@@ -147,3 +147,12 @@ chezmoi edit ~/.bashrc
 chezmoi diff
 chezmoi -v apply
 ```
+
+### Tmux Restore
+
+Configured with `tmux-resurrect` and `tmux-continuum`.
+
+* Save manually: `C-Space Ctrl-s`
+* Restore manually: `C-Space Ctrl-r`
+* Auto-save interval: 15 minutes
+* Auto-restore runs when the tmux server starts
