@@ -1,9 +1,0 @@
-binds {
-    Mod+Shift+D hotkey-overlay-title="Toggle Output Profile" {
-        spawn "~/.local/bin/niri-toggle-outputs-profile";
-    }
-
-    Mod+Shift+X hotkey-overlay-title="Rootful XWayland Dev" {
-        spawn "~/.local/bin/jm-rootful-xwayland-dev";
-    }
-}
