@@ -32,7 +32,11 @@
       ],
       "right": [
         {
-          "id": "omarchy.tray"
+          "id": "omarchy.tray",
+          "pinned": [
+            "Talon"
+          ],
+          "hidden": []
         },
         {
           "id": "omarchy.agents"

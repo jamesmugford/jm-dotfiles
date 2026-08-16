@@ -51,3 +51,4 @@ application/x-synology-drive-slides=synology-drive-open-file.desktop
 x-scheme-handler/jetbrains=jetbrainsd.desktop
 x-scheme-handler/air=jetbrains-air.desktop
 x-scheme-handler/claude-cli=claude-code-url-handler.desktop
+x-scheme-handler/codex=chatgpt.desktop
